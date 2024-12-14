@@ -1284,201 +1284,61 @@ nav a:hover {
 
 /* Media Queries for Mobile Devices */
 @media screen and (max-width: 844px) {
-    /* Base setup */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
+    /* Reset and base setup */
     html, body {
         width: 100%;
+        height: auto;
         overflow-x: hidden;
-        font-size: 16px; /* Base font size for relative units */
+        scroll-behavior: smooth;
     }
 
-    /* Main content */
+    /* Remove navigation elements */
+    .sidebar,
+    .navigation-arrows,
+    nav {
+        display: none !important;
+    }
+
+    /* Main content container */
     .content {
-        width: 100vw;
-        padding: 5vw;
+        width: 100%;
         margin: 0;
+        padding: 0;
+        overflow-y: visible;
     }
 
-    /* Sections */
+    /* Section styling */
     .section {
         width: 100%;
         min-height: 100vh;
-        padding: 5vh 5vw;
-        margin-bottom: 5vh;
+        padding: 40px 20px;
+        scroll-snap-align: start;
     }
 
-    /* Home Section */
-    .profile-container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 5vh 0;
-    }
-
-    .profile-info {
-        width: 90%;
-    }
-
-    .greeting {
-        font-size: 1rem;
-        margin-bottom: 2vh;
-    }
-
-    h1.name {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-        margin: 2vh 0;
-    }
-
-    .description {
-        font-size: clamp(0.9rem, 4vw, 1.1rem);
-        line-height: 1.6;
-        margin: 2vh 0;
-    }
-
-    /* Buttons */
-    .button-group {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2vh;
-        margin: 3vh 0;
-    }
-
-    .resume-btn, .social-link {
-        width: 90%;
-        max-width: 280px;
-        padding: 2vh 4vw;
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
-    }
-
-    /* Compiler Section */
-    .compiler-section {
-        width: 90%;
-        margin: 3vh auto;
-    }
-
-    .code-snippet {
+    /* Make sections flow continuously */
+    #home,
+    #about,
+    #projects,
+    #contact {
+        position: relative;
+        display: block;
         width: 100%;
     }
 
-    .code-input {
-        min-height: 20vh;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 3vw;
-        padding: 2vh 0;
-    }
-
-    .skill-item {
-        padding: 2vh 2vw;
-    }
-
-    .skill-item i {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-    }
-
-    /* Projects Section */
-    .projects-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 4vh;
-    }
-
-    .project-card {
-        width: 100%;
-        margin-bottom: 4vh;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: 30vh;
-        object-fit: cover;
-    }
-
-    .project-info {
-        padding: 3vh 4vw;
-    }
-
-    .project-info h3 {
-        font-size: clamp(1.2rem, 4vw, 1.5rem);
-    }
-
-    .tech-stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2vw;
-        margin: 2vh 0;
-    }
-
-    .tech-tag {
-        padding: 1vh 2vw;
-        font-size: clamp(0.8rem, 3vw, 1rem);
-    }
-
-    /* Contact Section */
+    /* Content spacing */
+    .profile-container,
+    .about-content,
+    .projects-grid,
     .contact-container {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .contact-form {
+        padding: 20px;
+        margin: 0;
         width: 100%;
     }
 
-    .form-group {
-        margin-bottom: 3vh;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 2vh 3vw;
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
-    }
-
-    .submit-btn {
-        width: 100%;
-        padding: 2vh;
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
-    }
-
-    /* Contact Details */
-    .contact-details {
-        margin-top: 5vh;
-        display: flex;
-        flex-direction: column;
-        gap: 3vh;
-    }
-
-    .contact-item {
-        text-align: center;
-    }
-
-    .contact-item i {
-        font-size: clamp(1.5rem, 5vw, 2rem);
-        margin-bottom: 1vh;
-    }
-
-    /* Headers */
-    h2 {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-        margin-bottom: 3vh;
-    }
-
-    /* Hide desktop elements */
-    .sidebar,
-    .navigation-arrows {
-        display: none;
+    /* Remove any fixed positioning */
+    .fixed,
+    .sticky {
+        position: relative !important;
     }
 }
 
