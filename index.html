@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <a href="#" class="logo"><span>OY</span></a>
+        </div>
+        <div class="nav-items">
+            <a href="#home" class="nav-item active"><i class="fas fa-home"></i></a>
+            <a href="#about" class="nav-item"><i class="fas fa-user"></i></a>
+            <a href="#projects" class="nav-item"><i class="fas fa-laptop-code"></i></a>
+            <a href="#contact" class="nav-item"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="navigation-arrows">
+            <div class="scroll-up">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="profile-container">
+                <div class="profile-info">
+                    <p class="greeting">HI THERE! I'M</p>
+                    <h1 class="name">
+                        <span class="highlight">Omar</span> Yoness
+                    </h1>
+                    <p class="description">
+                        A <span class="highlight">Front-End Software Developer</span> passionate about 
+                        creating interactive applications and experiences on the web.
+                    </p>
+                    
+                    <div class="home-content">
+                        <div class="button-group">
+                            <a href="assets/Omar Yoness Resume0.pdf" class="resume-btn" target="_blank" download>
+                                Download Resume <i class="fas fa-download"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/..." class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/..." class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Compiler section -->
+                        <div class="compiler-section">
+                            <p class="compiler-text">Try out my built-in JavaScript compiler! 🚀</p>
+                            <div class="code-snippet">
+                                <div class="code-header">
+                                    <span class="file-name">playground.js</span>
+                                    <button class="compile-button" onclick="evaluateCode()">Run</button>
+                                </div>
+                                <div class="code-content">
+                                    <textarea class="code-input" spellcheck="false"></textarea>
+                                </div>
+                                <div class="output">
+                                    > Ready to run...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="about-header">
+                <h2>About Me</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p> I transform ideas into clean, efficient, and user-friendly applications.</p>
+                </div>
+                
+                <div class="skills-section">
+                    <div class="skills-header">
+                        <h3>My Skills</h3>
+                    </div>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-jira"></i>
+                            <span>Jira</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="projects-header">
+                <h2>My Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- 905 Glossary Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/905-glossary-logo-red.png" alt="905 Glossary" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>905 Glossary - Auto Detailing Website</h3>
+                        <p class="project-description">A premium auto detailing website I developed for my own side business. Built with WordPress and customized using HTML, CSS, and JavaScript to create a modern, minimalist design. The site includes booking functionality, service pricing, gallery showcase, and responsive design to provide clients with a seamless booking experience.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://wp152.ntxwd.com/" target="_blank" class="link-button">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="\assets\images\Screenshot 2024-12-09 200426.png" alt="Theme Shifting Calculator" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Theme Shifting Calculator</h3>
+                        <p class="project-description">A dynamic calculator web application featuring multiple theme options. Built using vanilla JavaScript, HTML, and CSS, this project demonstrates front-end development skills with a focus on DOM manipulation and theme switching functionality.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/OmarYoness/calculator1" target="_blank" class="link-button">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/Screenshot 2024-12-10 002338.png" alt="Interactive Quiz Application" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Interactive Quiz Application</h3>
+                        <p class="project-description">A dynamic quiz application that tests users' knowledge across various topics. Features include multiple-choice questions, instant feedback, score tracking, and a timer. Built with React and styled with CSS, demonstrating state management and component-based architecture.</p>
+                        <div class="tech-stack">
+                        
+                        
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/OmarYoness/quiz" target="_blank" class="link-button">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interest Calculator Pro Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/Screenshot 2024-12-10 014249.png" alt="Interest Calculator Pro" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Interest Calculator Pro</h3>
+                        <p class="project-description">A comprehensive financial calculator that helps users calculate Simple Interest, Compound Interest, and EMI (Equated Monthly Installment). Features include multiple calculation modes, interactive input fields, and detailed breakdowns of payment schedules. Built with JavaScript to provide real-time calculations and a user-friendly interface.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/OmarYoness/complex-interest-app" target="_blank" class="link-button">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-container">
+                <h2 class="contact-title">Contact Me</h2>
+                
+                <form class="contact-form" action="https://formspree.io/f/xjkvdovn" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-details" style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+                        <div class="contact-item" style="text-align: center;">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>itsomaryounis7@gmail.com</p>
+                        </div>
+                        <div class="contact-item" style="text-align: center;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Mississauga, Canada</p>
+                        </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add this before closing body tag -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    <!-- Add some decorative elements -->
+    <div class="decorative-elements">
+        <div class="tech-stack-preview">
+            <!-- Add your tech stack icons here -->
+        </div>
+    </div>
+
+    <div class="compilation-effect"></div>
+</body>
+</html> 
