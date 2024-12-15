@@ -1058,300 +1058,58 @@ html {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .name-title {
-        font-size: 2.5rem;
-    }
-    
-    #home {
-        padding: 2rem 1rem;
-    }
-    
-    .code-snippet {
-        width: 95%;
-    }
-}
 
-.code-content {
-    padding: 15px;
-    position: relative;
-    background: #1E1E1E;
-}
+/* Mobile-First CSS (for screens <= 768px) */
 
-.code-input {
-    width: 100%;
-    min-height: 150px;
-    max-height: 150px;
-    background: #1E1E1E;
-    border: none;
-    color: #D4D4D4;
-    font-family: 'Consolas', monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    resize: none;
-    outline: none;
-    padding: 10px;
-    white-space: pre;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
 
-.code-header {
-    background: #fafafa;
-    padding: 8px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #3D3D3D;
-}
-
-.output {
-    padding: 15px;
-    border-top: 1px solid #3D3D3D;
-    font-family: 'Consolas', monospace;
-    font-size: 14px;
-    color: #4EC9B0;
-    min-height: 50px;
-    background: #1E1E1E;
-}
-
-.compile-button {
-    background: #4EC9B0;
-    color: #1E1E1E;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
-}
-
-.compile-button:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transition: width 0.4s ease, height 0.4s ease;
-}
-
-.compile-button:hover {
-    background: #3DB89F;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(78, 201, 176, 0.3);
-}
-
-.compile-button:hover:before {
-    width: 150px;
-    height: 150px;
-    opacity: 0;
-}
-
-.compile-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(78, 201, 176, 0.2);
-}
-
-/* Add loading state */
-.compile-button.loading {
-    background: #3DB89F;
-    pointer-events: none;
-    opacity: 0.8;
-}
-
-.compile-button.loading:after {
-    content: '';
-    width: 14px;
-    height: 14px;
-    border: 2px solid #1E1E1E;
-    border-top: 2px solid transparent;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin-left: 8px;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Remove default browser validation styling */
-.form-group input:invalid,
-.form-group textarea:invalid {
-    box-shadow: none;
-}
-
-/* Only show error state after user interaction and invalid input */
-.form-group input.touched:invalid,
-.form-group textarea.touched:invalid {
-    border-color: #ff4444;
-}
-
-.form-group input.touched:invalid:focus,
-.form-group textarea.touched:invalid:focus {
-    box-shadow: 0 0 0 4px rgba(255, 68, 68, 0.1);
-}
-
-:root {
-    --purple: #8957ff;
-    --dark-purple: #6e45cc;
-    --text-gray: #333;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth; /* Enable smooth scrolling */
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: #f8f8f8;
-    overflow: auto;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: var(--purple);
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--dark-purple);
-}
-
-.sidebar {
-    width: 80px;
-    background: var(--purple);
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.sidebar:hover {
-    width: 120px;
-}
-
-.content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: white;
-    margin: 10px 0;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.sidebar a:hover {
-    color: var(--dark-purple);
-}
-
-/* Media Queries for Mobile Devices */
-@media screen and (max-width: 844px) {
-    /* Reset and base setup */
-    html, body {
-        width: 100%;
-        height: auto;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
+    .desktop-only-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Full height for centering */
+        background-color: #f8f8f8; /* Light background */
+        color: #333; /* Text color */
+        text-align: center;
+        padding: 20px;
     }
 
-    /* Remove navigation elements */
-    .sidebar,
-    .navigation-arrows,
-    nav {
+    .desktop-only-message h1 {
+        font-size: 2rem; /* Larger font for visibility */
+        margin-bottom: 10px;
+    }
+
+    .desktop-only-message p {
+        font-size: 1rem; /* Standard font size */
+    }
+
+/* Desktop-only styles */
+@media screen and (max-width: 768px) {
+    /* Hide all content on mobile */
+    body * {
         display: none !important;
     }
 
-    /* Main content container */
-    .content {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-y: visible;
-    }
-
-    /* Section styling */
-    .section {
-        width: 100%;
-        min-height: 100vh;
-        padding: 40px 20px;
-        scroll-snap-align: start;
-    }
-
-    /* Make sections flow continuously */
-    #home,
-    #about,
-    #projects,
-    #contact {
-        position: relative;
-        display: block;
-        width: 100%;
-    }
-
-    /* Content spacing */
-    .profile-container,
-    .about-content,
-    .projects-grid,
-    .contact-container {
+    /* Show only a message */
+    body:before {
+        display: block !important;
+        content: "The site is only available on desktop devices. ( mobile version coming soon )";
+        
+        text-align: center;
         padding: 20px;
-        margin: 0;
-        width: 100%;
+        font-size: 1.5rem;
+        color: #333;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
     }
 
-    /* Remove any fixed positioning */
-    .fixed,
-    .sticky {
-        position: relative !important;
-    }
-}
-
-/* Ensure text remains readable on very small devices */
-@media screen and (max-width: 280px) {
-    html {
-        font-size: 14px;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* Prevent scrolling */
+    body {
+        overflow: hidden;
+        height: 100vh;
+        background: #f8f8f8;
     }
 }
-
-
-/* Mobile Responsive Design */
